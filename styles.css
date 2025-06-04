@@ -1,0 +1,501 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: #172217;
+  color: #f4f4f4;
+}
+
+/* Navbar */
+.navbar {
+  background: #233224;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.navbar-logo img {
+  height: 48px;
+  width: 48px;
+  border-radius: 8px;
+  background: #fff;
+}
+.navbar-logo span {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #e1f7d5;
+  letter-spacing: 1px;
+}
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  color: #b9e4c9;
+  cursor: pointer;
+  user-select: none;
+}
+.menu-toggle {
+  display: none;
+}
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+.navbar-links a {
+  color: #b9e4c9;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.navbar-links a:hover {
+  color: #e1f7d5;
+}
+
+/* Responsive Navbar */
+@media (max-width: 900px) {
+  .navbar-links {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: #233224;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1rem 0;
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+  }
+  .menu-toggle:checked + .menu-icon + .navbar-links {
+    display: flex;
+  }
+}
+
+/* Hero */
+.hero {
+  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+  height: 60vh;
+  min-height: 350px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-overlay {
+  background: rgba(20, 34, 20, 0.73);
+  padding: 3rem 2rem;
+  border-radius: 1.2rem;
+  text-align: center;
+  box-shadow: 0 4px 32px rgba(20, 34, 20, 0.18);
+}
+.hero h1 {
+  font-size: 2.4rem;
+  color: #e1f7d5;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.hero p {
+  font-size: 1.15rem;
+  color: #cdeac0;
+  margin-bottom: 1.2rem;
+}
+.hero-btn {
+  padding: 0.8rem 2.2rem;
+  background: #5c836a;
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s;
+  box-shadow: 0 2px 12px #0002;
+}
+.hero-btn:hover {
+  background: #3c5b43;
+}
+
+/* Destinos */
+.destinos {
+  background: #1b271b;
+  padding: 2.5rem 0;
+  text-align: center;
+}
+.destinos h2 {
+  color: #d1edc1;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+.destinos-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.destino-card {
+  background: #253321;
+  border-radius: 1rem;
+  overflow: hidden;
+  width: 300px;
+  min-width: 220px;
+  box-shadow: 0 4px 16px rgba(28,28,28,0.18);
+  text-align: center;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.destino-card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+.destino-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background: #162a17;
+}
+.destino-card h3 {
+  color: #b9e4c9;
+  margin-top: 0.7rem;
+  font-size: 1.15rem;
+}
+.destino-card p {
+  color: #e6fbe0;
+  padding: 0 1rem 1rem;
+  font-size: 1rem;
+}
+
+/* Hospedajes */
+.hospedajes {
+  background: #212f22;
+  padding: 2.5rem 0;
+  text-align: center;
+}
+.hospedajes h2 {
+  color: #d1edc1;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+.hospedajes-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.hospedaje-card {
+  background: #293b2a;
+  border-radius: 1rem;
+  overflow: hidden;
+  width: 270px;
+  min-width: 220px;
+  box-shadow: 0 2px 8px #0003;
+  text-align: center;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hospedaje-card:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+.hospedaje-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  background: #233224;
+}
+.hospedaje-card h3 {
+  color: #b9e4c9;
+  margin-top: 0.7rem;
+}
+.hospedaje-card p {
+  color: #e6fbe0;
+  padding: 0 1rem 1rem;
+}
+
+/* Itinerario */
+.itinerario {
+  background: #192519;
+  padding: 2.5rem 0;
+  text-align: center;
+}
+.itinerario h2 {
+  color: #d1edc1;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+.itinerario-table {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.itinerario-dia {
+  background: #253321;
+  border-radius: 1rem;
+  width: 260px;
+  min-width: 190px;
+  padding: 1.2rem;
+  box-shadow: 0 2px 8px #0002;
+  color: #e6fbe0;
+  text-align: left;
+}
+.itinerario-dia h4 {
+  color: #b9e4c9;
+  margin-bottom: 0.6rem;
+  font-size: 1.13rem;
+}
+.itinerario-dia ul {
+  padding-left: 1rem;
+}
+
+/* Sobre Nosotros */
+.sobre-nosotros {
+  background: #1b271b;
+  padding: 2.5rem 0;
+  text-align: center;
+}
+.sobre-nosotros h2 {
+  color: #d1edc1;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+.sobre-nosotros-info {
+  max-width: 900px;
+  margin: 0 auto 2.5rem auto;
+  background: #233224;
+  border-radius: 1rem;
+  padding: 2rem 2rem 1.2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  box-shadow: 0 2px 12px #0002;
+}
+.sobre-nosotros-info h3 {
+  color: #b9e4c9;
+  margin-bottom: 0.35rem;
+}
+.sobre-nosotros-info p {
+  color: #e6fbe0;
+  margin-top: 0;
+  margin-bottom: 0.9rem;
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+.mision-vision {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+.mision-vision > div {
+  flex: 1 1 250px;
+}
+.creados {
+  margin-top: 0.6rem;
+}
+.equipo-titulo {
+  margin: 2.2rem 0 1.2rem 0;
+  color: #d1edc1;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.equipo-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+.equipo-card {
+  background: #293b2a;
+  border-radius: 1rem;
+  width: 200px;
+  min-width: 150px;
+  padding: 1.2rem 0.5rem 1.5rem;
+  box-shadow: 0 2px 8px #0002;
+  text-align: center;
+}
+.equipo-card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: -35px;
+  border: 4px solid #e1f7d5;
+  background: #fff;
+}
+.equipo-card h4 {
+  color: #b9e4c9;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+}
+.equipo-card p {
+  color: #e6fbe0;
+  font-size: 0.97rem;
+}
+
+/* Mapa */
+.mapa {
+  background: #212f22;
+  padding: 2.5rem 0;
+  text-align: center;
+}
+.mapa h2 {
+  color: #d1edc1;
+  margin-bottom: 2rem;
+}
+.mapa-contenedor {
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 2px 12px #0003;
+  background: #172217;
+}
+
+/* Contacto */
+.contacto {
+  background: #1b271b;
+  padding: 2.5rem 0 2rem 0;
+  text-align: center;
+  position: relative;
+}
+.ave-svg {
+  margin: 0 auto 1rem auto;
+  width: 80px;
+}
+.contacto h2 {
+  color: #d1edc1;
+  margin-bottom: 2rem;
+}
+.contacto-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 350px;
+  margin: 0 auto 1.5rem;
+}
+.contacto-form input, .contacto-form textarea {
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 0.7rem;
+  font-size: 1rem;
+  resize: none;
+  background: #233224;
+  color: #e6fbe0;
+  box-shadow: 0 2px 8px #0001;
+}
+.contacto-form textarea {
+  min-height: 80px;
+}
+.contacto-form button {
+  background: #5c836a;
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.7rem;
+  font-size: 1.08rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.contacto-form button:hover {
+  background: #3c5b43;
+}
+.contacto-info {
+  color: #e6fbe0;
+}
+.contacto-info a {
+  color: #b9e4c9;
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  background: #233224;
+  color: #b9e4c9;
+  text-align: center;
+  padding: 1rem 0 1.3rem;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer a {
+  color: #d1edc1;
+  margin: 0 0.3rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer a:hover {
+  color: #e6fbe0;
+}
+
+@media (max-width: 1200px) {
+  .destinos-cards, .hospedajes-cards, .equipo-cards, .itinerario-table {
+    gap: 1.2rem;
+  }
+}
+@media (max-width: 900px) {
+  .destinos-cards, .hospedajes-cards, .equipo-cards, .itinerario-table {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .footer {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .sobre-nosotros-info {
+    padding: 1.1rem 0.7rem 0.8rem 0.7rem;
+  }
+  .mision-vision {
+    flex-direction: column;
+    gap: 1.3rem;
+  }
+}
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0.8rem 0.7rem;
+  }
+  .hero-overlay {
+    padding: 1.5rem 0.6rem;
+  }
+  .destino-card,
+  .hospedaje-card,
+  .itinerario-dia,
+  .equipo-card {
+    width: 95vw;
+    min-width: 0;
+    max-width: 400px;
+  }
+  .mapa-contenedor {
+    max-width: 99vw;
+  }
+  .ave-svg {
+    width: 60px;
+  }
+}
+
+/* Scrollbar personalizado (opcional) */
+::-webkit-scrollbar {
+  width: 9px;
+  background: #233224;
+}
+::-webkit-scrollbar-thumb {
+  background: #5c836a;
+  border-radius: 5px;
+}
