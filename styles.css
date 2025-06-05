@@ -3,6 +3,7 @@ body {
   font-family: 'Montserrat', Arial, sans-serif;
   background: #172217;
   color: #f4f4f4;
+  scroll-behavior: smooth;
 }
 
 /* Iconos en titulos y subtitulos */
