@@ -5,6 +5,50 @@ body {
   color: #f4f4f4;
 }
 
+/* Iconos en titulos y subtitulos */
+.title-icon {
+  vertical-align: middle;
+  display: inline-block;
+  height: 36px;
+  width: 36px;
+  margin-right: 0.6rem;
+  margin-bottom: 0.18em;
+  object-fit: contain;
+}
+.subtitle-icon {
+  vertical-align: middle;
+  display: inline-block;
+  height: 26px;
+  width: 26px;
+  margin-right: 0.5rem;
+  margin-bottom: 0.12em;
+  object-fit: contain;
+}
+.planet-icon {
+  display: block;
+  margin: 0.7rem auto 0.7rem auto;
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+}
+@media (max-width: 600px) {
+  .title-icon {
+    height: 24px;
+    width: 24px;
+    margin-right: 0.32rem;
+  }
+  .subtitle-icon {
+    height: 18px;
+    width: 18px;
+    margin-right: 0.2rem;
+  }
+  .planet-icon {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 0.4rem;
+  }
+}
+
 /* Navbar */
 .navbar {
   background: #233224;
@@ -12,9 +56,12 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0.8rem 2rem;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
+  height: 64px;
 }
 .navbar-logo {
   display: flex;
@@ -25,7 +72,6 @@ body {
   height: 48px;
   width: 48px;
   border-radius: 8px;
-  background: #fff;
 }
 .navbar-logo span {
   font-size: 1.3rem;
@@ -80,24 +126,43 @@ body {
     display: flex;
   }
 }
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0.8rem 0.7rem;
+    height: 56px;
+  }
+}
 
-/* Hero */
+/* Hero ocupa toda la pantalla menos navbar */
 .hero {
   background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
-  height: 60vh;
-  min-height: 350px;
-  position: relative;
+  width: 100vw;
+  min-height: calc(100vh - 64px);
+  height: calc(100vh - 64px);
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  margin-top: 64px;
 }
+@media (max-width: 600px) {
+  .hero {
+    min-height: calc(100vh - 56px);
+    height: calc(100vh - 56px);
+    margin-top: 56px;
+  }
+}
+
 .hero-overlay {
   background: rgba(20, 34, 20, 0.73);
   padding: 3rem 2rem;
   border-radius: 1.2rem;
   text-align: center;
   box-shadow: 0 4px 32px rgba(20, 34, 20, 0.18);
+  width: 100%;
+  max-width: 500px;
 }
+
 .hero h1 {
   font-size: 2.4rem;
   color: #e1f7d5;
@@ -138,6 +203,10 @@ body {
   margin-bottom: 2rem;
   font-size: 2rem;
   letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 .destinos-cards {
   display: flex;
@@ -188,6 +257,10 @@ body {
   color: #d1edc1;
   margin-bottom: 2rem;
   font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 .hospedajes-cards {
   display: flex;
@@ -236,6 +309,10 @@ body {
   color: #d1edc1;
   margin-bottom: 2rem;
   font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 .itinerario-table {
   display: flex;
@@ -272,6 +349,10 @@ body {
   color: #d1edc1;
   margin-bottom: 2rem;
   font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 .sobre-nosotros-info {
   max-width: 900px;
@@ -287,6 +368,9 @@ body {
 .sobre-nosotros-info h3 {
   color: #b9e4c9;
   margin-bottom: 0.35rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
 }
 .sobre-nosotros-info p {
   color: #e6fbe0;
@@ -311,6 +395,10 @@ body {
   color: #d1edc1;
   font-size: 1.3rem;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
 }
 .equipo-cards {
   display: flex;
@@ -355,6 +443,11 @@ body {
 .mapa h2 {
   color: #d1edc1;
   margin-bottom: 2rem;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 .mapa-contenedor {
   max-width: 700px;
@@ -375,6 +468,27 @@ body {
 .ave-svg {
   margin: 0 auto 1rem auto;
   width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ave-img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+@media (max-width: 600px) {
+  .ave-svg {
+    width: 48px;
+    height: 48px;
+  }
+  .ave-img {
+    width: 38px;
+    height: 38px;
+  }
 }
 .contacto h2 {
   color: #d1edc1;
@@ -468,11 +582,10 @@ body {
   }
 }
 @media (max-width: 600px) {
-  .navbar {
-    padding: 0.8rem 0.7rem;
-  }
-  .hero-overlay {
-    padding: 1.5rem 0.6rem;
+  .hero {
+    min-height: calc(100vh - 56px);
+    height: calc(100vh - 56px);
+    margin-top: 56px;
   }
   .destino-card,
   .hospedaje-card,
@@ -484,9 +597,6 @@ body {
   }
   .mapa-contenedor {
     max-width: 99vw;
-  }
-  .ave-svg {
-    width: 60px;
   }
 }
 
