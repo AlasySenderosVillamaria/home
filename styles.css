@@ -541,36 +541,78 @@ body {
 .footer {
   background: #233224;
   color: #b9e4c9;
-  text-align: center;
-  padding: 1rem 0 1.3rem;
+  padding: 1.3rem 0 1.3rem 0;
   font-size: 1rem;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
+  flex-direction: column;
   align-items: center;
+  gap: 0.7rem;
+  border-top: 1px solid #2d4030;
 }
-.footer a {
+
+.footer-main {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.footer-main > div {
+  margin: 0.2rem 0;
+}
+
+.footer-social a {
   color: #d1edc1;
   margin: 0 0.3rem;
   text-decoration: none;
   transition: color 0.2s;
 }
-.footer a:hover {
-  color: #e6fbe0;
+
+.footer-social a:hover {
+  color: #e1f7d5;
 }
-.creditos {
+
+.footer-credits {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.95rem;
+  font-size: 0.97rem;
+  color: #b9e4c9;
+  margin-top: 0.4rem;
+  opacity: 0.85;
 }
+
 .flaticon-logo {
   height: 23px;
   width: 23px;
   vertical-align: middle;
   object-fit: contain;
-  margin-right: 0.3em;
+  margin-right: 0.28em;
+}
+
+.footer-credits a {
+  color: #b9e4c9;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.footer-credits a:hover {
+  color: #e1f7d5;
+}
+
+@media (max-width: 800px) {
+  .footer-main {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .footer-credits {
+    font-size: 0.92rem;
+    text-align: center;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
 }
 @media (max-width: 900px) {
   .destinos-cards, .hospedajes-cards, .equipo-cards, .itinerario-table {
@@ -579,7 +621,6 @@ body {
     gap: 1.5rem;
   }
   .footer {
-    flex-direction: column;
     gap: 0.6rem;
   }
   .sobre-nosotros-info {
