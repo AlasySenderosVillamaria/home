@@ -2,147 +2,279 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=640, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Alas y Senderos Villamaría</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="logo.png">
 </head>
 <body>
-  <header>
-    <h1>Alas y Senderos Villamaría</h1>
-    <!-- Aquí iría el menú de navegación si lo tienes -->
-  </header>
-  <main>
-    <!-- Mapa actualizado -->
-    <section id="mapa" class="mapa">
-      <h2>
-        <img src="images/icon/map.png" class="title-icon" alt="Icono Mapa">
-        Ubicación
-      </h2>
-      <div class="mapa-contenedor">
-        <iframe src="https://www.google.com/maps/d/embed?mid=1I3nZGyEesYsF0d0nhd8JpZ_ArV7Aejo&hl=es-419&ehbc=2E312F" width="640" height="480"></iframe>
-      </div>
-    </section>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <img src="logo.png" alt="Logo Alas y Senderos Villamaría">
+      <span>Alas y Senderos Villamaría</span>
+    </div>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <ul class="navbar-links">
+      <li><a href="#destinos">Destinos</a></li>
+      <li><a href="#hospedajes">Hospedajes</a></li>
+      <li><a href="#itinerario">Itinerario</a></li>
+      <li><a href="#equipo">Sobre Nosotros</a></li>
+      <li><a href="#mapa">Ruta</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
 
-    <!-- Destinos actualizados -->
-    <section id="destinos" class="destinos">
-      <h2>
-        <img src="images/icon/destino.png" class="title-icon" alt="Icono Destino">
-        Nuestros Destinos
-      </h2>
-      <div class="destinos-cards">
-        <div class="destino-card">
-          <img class="destino-img" src="https://placehold.co/300x180?text=Sendero+La+Soledad" alt="Sendero La Soledad">
-          <h3>Sendero La Soledad, Río Claro</h3>
-          <p>Recorrido ecológico ideal para el avistamiento de aves y naturaleza exuberante.</p>
-        </div>
-        <div class="destino-card">
-          <img class="destino-img" src="https://placehold.co/300x180?text=Sendero+Corozal" alt="Sendero Corozal">
-          <h3>Sendero Corozal, Río Claro</h3>
-          <p>Sendero en el sector El Corozal, perfecto para la observación de aves y flora local.</p>
-        </div>
-        <div class="destino-card">
-          <img class="destino-img" src="https://placehold.co/300x180?text=Sendero+de+la+Mula" alt="Sendero de la Mula">
-          <h3>Sendero de la Mula</h3>
-          <p>Caminata guiada por hermosos paisajes rurales y actividades de naturaleza.</p>
-        </div>
-        <div class="destino-card">
-          <img class="destino-img" src="https://placehold.co/300x180?text=Cascada+Molinos" alt="Cascada Molinos">
-          <h3>Cascada Molinos</h3>
-          <p>Impresionante caída de agua, ideal para fotografía y contemplación del entorno.</p>
-        </div>
-        <div class="destino-card">
-          <img class="destino-img" src="https://placehold.co/300x180?text=PNN+Los+Nevados" alt="Parque Nacional Natural Los Nevados">
-          <h3>Parque Nacional Natural Los Nevados</h3>
-          <p>Senderismo de altura y avistamiento de fauna en uno de los parques naturales más emblemáticos de Colombia.</p>
-        </div>
-      </div>
-      <p style="margin-top:1.5em;"><strong>Nota:</strong> Los senderos de Río Claro son para avistamiento de aves y la naturaleza.</p>
-    </section>
+  <!-- Hero ocupa toda la pantalla menos navbar -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1>Explora la naturaleza andina</h1>
+      <img src="images/icon/planet-earth.png" alt="Planeta Tierra" class="planet-icon">
+      <p>Vive la aventura del senderismo y el avistamiento de aves en Villamaría, Caldas.</p>
+      <a href="#destinos" class="hero-btn">Ver destinos</a>
+    </div>
+  </section>
 
-    <!-- Hospedajes actualizados -->
-    <section id="hospedajes" class="hospedajes">
-      <h2>
-        <img src="images/icon/hotel.png" class="title-icon" alt="Icono Hotel">
-        Hospedajes
-      </h2>
-      <div class="hospedajes-cards">
-        <div class="hospedaje-card">
-          <img class="hospedaje-img" src="https://placehold.co/270x160?text=Ecohotel+Java" alt="Ecohotel Java">
-          <h3>Ecohotel Java</h3>
-          <p>Alojamiento ecológico rodeado de naturaleza, ideal para el descanso y la conexión ambiental.</p>
-        </div>
-        <div class="hospedaje-card">
-          <img class="hospedaje-img" src="https://placehold.co/270x160?text=Hostal+La+Laguna" alt="Hostal La Laguna">
-          <h3>Hostal La Laguna</h3>
-          <p>Una experiencia única de hospedaje con vistas a las montañas y acceso directo a rutas naturales.</p>
-        </div>
+  <!-- Destinos ACTUALIZADOS -->
+  <section id="destinos" class="destinos">
+    <h2>
+      <img src="images/icon/path.png" class="title-icon" alt="Icono Camino">
+      Nuestros Destinos
+    </h2>
+    <div class="destinos-cards">
+      <div class="destino-card">
+        <img class="destino-img" src="https://placehold.co/300x180?text=Sendero+La+Soledad" alt="Sendero La Soledad">
+        <h3>Sendero La Soledad, Río Claro</h3>
+        <p>Recorrido ecológico ideal para el avistamiento de aves y naturaleza exuberante.</p>
       </div>
-    </section>
+      <div class="destino-card">
+        <img class="destino-img" src="https://placehold.co/300x180?text=Sendero+Corozal" alt="Sendero Corozal">
+        <h3>Sendero Corozal, Río Claro</h3>
+        <p>Sendero en el sector El Corozal, perfecto para la observación de aves y flora local.</p>
+      </div>
+      <div class="destino-card">
+        <img class="destino-img" src="https://placehold.co/300x180?text=Sendero+de+la+Mula" alt="Sendero de la Mula">
+        <h3>Sendero de la Mula</h3>
+        <p>Caminata guiada por hermosos paisajes rurales y actividades de naturaleza.</p>
+      </div>
+      <div class="destino-card">
+        <img class="destino-img" src="https://placehold.co/300x180?text=Cascada+Molinos" alt="Cascada Molinos">
+        <h3>Cascada Molinos</h3>
+        <p>Impresionante caída de agua, ideal para fotografía y contemplación del entorno.</p>
+      </div>
+      <div class="destino-card">
+        <img class="destino-img" src="https://placehold.co/300x180?text=PNN+Los+Nevados" alt="Parque Nacional Natural Los Nevados">
+        <h3>Parque Nacional Natural Los Nevados</h3>
+        <p>Senderismo de altura y avistamiento de fauna en uno de los parques naturales más emblemáticos de Colombia.</p>
+      </div>
+    </div>
+    <p style="margin-top:1.5em;"><strong>Nota:</strong> Los senderos de Río Claro son para avistamiento de aves y la naturaleza.</p>
+  </section>
 
-    <!-- Itinerario actualizado -->
-    <section id="itinerario" class="itinerario">
-      <h2>
-        <img src="images/icon/itinerary.png" class="title-icon" alt="Icono Itinerario">
-        Itinerario: 3 días y 2 noches
-      </h2>
-      <div class="itinerario-table">
-        <!-- Día 1 -->
-        <div class="itinerario-dia">
-          <h3>Día 1: Exploración en Río Claro y llegada al Ecohotel Java</h3>
-          <ul>
-            <li><strong>6:45 a.m.</strong> Reunión en el parque principal</li>
-            <li><strong>7:00 a.m.</strong> Viaje en jeep hasta Río Claro</li>
-            <li><strong>7:30 a.m.</strong> Desayuno</li>
-            <li><strong>8:20 a.m.</strong> Llegada al sendero La Soledad, Río Claro</li>
-            <li><strong>8:30 a.m. – 1:30 p.m.</strong> Senderismo y avistamiento de aves en el sector El Corozal</li>
-            <li><strong>2:00 p.m.</strong> Almuerzo</li>
-            <li><strong>3:00 p.m. – 6:00 p.m.</strong> Recorrido por el sendero Río Claro – La Soledad</li>
-            <li><strong>6:00 p.m.</strong> Traslado en jeep al Ecohotel Java</li>
-            <li><strong>6:40 p.m.</strong> Llegada al hotel</li>
-            <li><strong>Noche:</strong> Descanso y cena en el Ecohotel Java</li>
-          </ul>
+  <!-- Hospedajes ACTUALIZADOS -->
+  <section id="hospedajes" class="hospedajes">
+    <h2>
+      <img src="images/icon/hotel.png" class="title-icon" alt="Icono Hotel">
+      Hospedajes
+    </h2>
+    <div class="hospedajes-cards">
+      <div class="hospedaje-card">
+        <img class="hospedaje-img" src="https://placehold.co/270x160?text=Ecohotel+Java" alt="Ecohotel Java">
+        <h3>Ecohotel Java</h3>
+        <p>Alojamiento ecológico rodeado de naturaleza, ideal para el descanso y la conexión ambiental.</p>
+      </div>
+      <div class="hospedaje-card">
+        <img class="hospedaje-img" src="https://placehold.co/270x160?text=Hostal+La+Laguna" alt="Hostal La Laguna">
+        <h3>Hostal La Laguna</h3>
+        <p>Una experiencia única de hospedaje con vistas a las montañas y acceso directo a rutas naturales.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Itinerario ACTUALIZADO -->
+  <section id="itinerario" class="itinerario">
+    <h2>
+      <img src="images/icon/itinerary.png" class="title-icon" alt="Icono Itinerario">
+      Itinerario: 3 días y 2 noches
+    </h2>
+    <div class="itinerario-table">
+      <!-- Día 1 -->
+      <div class="itinerario-dia">
+        <h3>Día 1: Exploración en Río Claro y llegada al Ecohotel Java</h3>
+        <ul>
+          <li><strong>6:45 a.m.</strong> Reunión en el parque principal</li>
+          <li><strong>7:00 a.m.</strong> Viaje en jeep hasta Río Claro</li>
+          <li><strong>7:30 a.m.</strong> Desayuno</li>
+          <li><strong>8:20 a.m.</strong> Llegada al sendero La Soledad, Río Claro</li>
+          <li><strong>8:30 a.m. – 1:30 p.m.</strong> Senderismo y avistamiento de aves en el sector El Corozal</li>
+          <li><strong>2:00 p.m.</strong> Almuerzo</li>
+          <li><strong>3:00 p.m. – 6:00 p.m.</strong> Recorrido por el sendero Río Claro – La Soledad</li>
+          <li><strong>6:00 p.m.</strong> Traslado en jeep al Ecohotel Java</li>
+          <li><strong>6:40 p.m.</strong> Llegada al hotel</li>
+          <li><strong>Noche:</strong> Descanso y cena en el Ecohotel Java</li>
+        </ul>
+      </div>
+      <!-- Día 2 -->
+      <div class="itinerario-dia">
+        <h3>Día 2: Caminatas ecológicas y conexión natural</h3>
+        <ul>
+          <li><strong>7:00 a.m.</strong> Traslado desde el Ecohotel Java al Hostal La Laguna (1 hora aprox.)</li>
+          <li><strong>8:00 a.m. – 11:00 a.m.</strong> Caminata guiada por el Sendero de la Mula (2–3 horas)</li>
+          <li><strong>11:30 a.m.</strong> Regreso al hostal y descanso</li>
+          <li><strong>12:30 p.m.</strong> Almuerzo en el Hostal La Laguna</li>
+          <li><strong>2:00 p.m.</strong> Caminata a la Cascada Los Molinos (90 minutos aprox.) o tiempo libre</li>
+          <li><strong>4:30 p.m.</strong> Tiempo libre: fotografía, lectura, contemplación</li>
+          <li><strong>6:30 p.m.</strong> Cena</li>
+          <li><strong>7:30 p.m.</strong> Actividad opcional: fogata o charla ambiental</li>
+        </ul>
+      </div>
+      <!-- Día 3 -->
+      <div class="itinerario-dia">
+        <h3>Día 3: Aventura en el Parque Nacional Natural Los Nevados (PNNN)</h3>
+        <ul>
+          <li><strong>5:30 a.m.</strong> Despertarse y alistarse para la salida</li>
+          <li><strong>6:00 a.m. – 8:00 a.m.</strong> Traslado desde el Hostal La Laguna al PNNN (incluye desayuno en el camino)</li>
+          <li><strong>8:00 a.m.</strong> Llegada al PNNN e ingreso</li>
+          <li><strong>8:00 a.m. – 1:30 p.m.</strong> Senderismo y avistamiento de fauna en el Parque Nacional</li>
+          <li><strong>1:30 p.m.</strong> Refrigerio</li>
+          <li><strong>2:00 p.m. – 5:00 p.m.</strong> Regreso hacia el parque principal de Villamaría (3 horas aprox.)</li>
+          <li><strong>5:00 p.m.</strong> Fin del recorrido</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre Nosotros -->
+  <section id="equipo" class="sobre-nosotros">
+    <h2>
+      <img src="images/icon/information-button.png" alt="Información" class="title-icon">
+      Sobre Nosotros
+    </h2>
+    <div class="sobre-nosotros-info">
+      <div class="quienes-somos">
+        <h3>
+          <img src="images/icon/group.png" class="subtitle-icon" alt="Icono Grupo">
+          ¿Quiénes somos?
+        </h3>
+        <p>
+          Somos una operadora turística de Villamaría, Caldas, comprometida con la sostenibilidad ambiental y social. Ofrecemos experiencias de senderismo y avistamiento de aves en destinos naturales, buscando siempre el equilibrio entre el disfrute, la conservación de la naturaleza y el bienestar de las comunidades locales.
+        </p>
+      </div>
+      <div class="mision-vision">
+        <div>
+          <h3>Misión</h3>
+          <p>
+            Ofrecer experiencias de ecoturismo auténticas y enriquecedoras en Villamaría, Caldas, centradas en el senderismo y el avistamiento de aves, promoviendo la conservación de la biodiversidad y el desarrollo sostenible de la región.
+          </p>
         </div>
-        <!-- Día 2 -->
-        <div class="itinerario-dia">
-          <h3>Día 2: Caminatas ecológicas y conexión natural</h3>
-          <ul>
-            <li><strong>7:00 a.m.</strong> Traslado desde el Ecohotel Java al Hostal La Laguna (1 hora aprox.)</li>
-            <li><strong>8:00 a.m. – 11:00 a.m.</strong> Caminata guiada por el Sendero de la Mula (2–3 horas)</li>
-            <li><strong>11:30 a.m.</strong> Regreso al hostal y descanso</li>
-            <li><strong>12:30 p.m.</strong> Almuerzo en el Hostal La Laguna</li>
-            <li><strong>2:00 p.m.</strong> Caminata a la Cascada Los Molinos (90 minutos aprox.) o tiempo libre</li>
-            <li><strong>4:30 p.m.</strong> Tiempo libre: fotografía, lectura, contemplación</li>
-            <li><strong>6:30 p.m.</strong> Cena</li>
-            <li><strong>7:30 p.m.</strong> Actividad opcional: fogata o charla ambiental</li>
-          </ul>
-        </div>
-        <!-- Día 3 -->
-        <div class="itinerario-dia">
-          <h3>Día 3: Aventura en el Parque Nacional Natural Los Nevados (PNNN)</h3>
-          <ul>
-            <li><strong>5:30 a.m.</strong> Despertarse y alistarse para la salida</li>
-            <li><strong>6:00 a.m. – 8:00 a.m.</strong> Traslado desde el Hostal La Laguna al PNNN (incluye desayuno en el camino)</li>
-            <li><strong>8:00 a.m.</strong> Llegada al PNNN e ingreso</li>
-            <li><strong>8:00 a.m. – 1:30 p.m.</strong> Senderismo y avistamiento de fauna en el Parque Nacional</li>
-            <li><strong>1:30 p.m.</strong> Refrigerio</li>
-            <li><strong>2:00 p.m. – 5:00 p.m.</strong> Regreso hacia el parque principal de Villamaría (3 horas aprox.)</li>
-            <li><strong>5:00 p.m.</strong> Fin del recorrido</li>
-          </ul>
+        <div>
+          <h3>Visión</h3>
+          <p>
+            Ser reconocidos como un destino líder en ecoturismo en la región del paisaje cultural cafetero, destacando por la calidad de nuestras experiencias, el compromiso con la sostenibilidad y el respeto por la naturaleza y las comunidades locales.
+          </p>
         </div>
       </div>
-    </section>
-    <!-- Aquí iría el resto del contenido principal, si lo tienes -->
-  </main>
-  <footer class="footer">
+      <div class="creados">
+        <h3>
+          <img src="images/icon/information-button.png" class="subtitle-icon" alt="Icono Información">
+          Nuestro origen
+        </h3>
+        <p>
+          Nacimos para conectar a las personas con los paisajes y la biodiversidad de Villamaría, fomentando el turismo responsable y el amor por la montaña y las aves, así como para aportar al desarrollo sostenible de nuestra región.
+        </p>
+      </div>
+    </div>
+    <h3 class="equipo-titulo">
+      <img src="images/icon/group.png" class="subtitle-icon" alt="Icono Grupo">
+      Nuestro Equipo
+    </h3>
+    <div class="equipo-cards">
+      <div class="equipo-card">
+        <img src="images/group/Marulanda.png" alt="Juan Marulanda">
+        <h4>Juan Marulanda</h4>
+        <p>Placeholder</p>
+      </div>
+      <div class="equipo-card">
+        <img src="images/group/Morales.png" alt="Juan Morales">
+        <h4>Juan Morales</h4>
+        <p>Placeholder</p>
+      </div>
+      <div class="equipo-card">
+        <img src="images/group/Marques.png" alt="Willynton Marques">
+        <h4>Willynton Marques</h4>
+        <p>Placeholder</p>
+      </div>
+      <div class="equipo-card">
+        <img src="images/group/Campo.png" alt="Laura Campo">
+        <h4>Laura Campo</h4>
+        <p>Placeholder</p>
+      </div>
+      <div class="equipo-card">
+        <img src="images/group/Lopez.png" alt="Miguel Lopez">
+        <h4>Miguel Lopez</h4>
+        <p>Placeholder</p>
+      </div>
+      <div class="equipo-card">
+        <img src="images/group/Gonzales.png" alt="Juan Gonzales">
+        <h4>Juan Gonzales</h4>
+        <p>Placeholder</p>
+      </div>
+      <div class="equipo-card">
+        <img src="images/group/Serna.png" alt="Jhon Serna">
+        <h4>Jhon Serna</h4>
+        <p>Placeholder</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mapa de la Ruta ACTUALIZADO -->
+  <section id="mapa" class="mapa">
+    <h2>
+      <img src="images/icon/mountain.png" class="title-icon" alt="Icono Montaña">
+      Mapa de la Ruta
+    </h2>
+    <div class="mapa-contenedor">
+      <iframe src="https://www.google.com/maps/d/embed?mid=1I3nZGyEesYsF0d0nhd8JpZ_ArV7Aejo&hl=es-419&ehbc=2E312F" width="640" height="480"></iframe>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="contacto">
+    <div class="ave-svg">
+      <img src="images/icon/bird.png" alt="Icono Ave" class="ave-img">
+    </div>
+    <h2>Contacto</h2>
+    <form class="contacto-form" autocomplete="off">
+      <input type="text" placeholder="Nombre" required>
+      <input type="email" placeholder="Correo electrónico" required>
+      <textarea placeholder="Escribe tu mensaje..." required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <p class="contacto-info">
+      También puedes escribirnos a <a href="mailto:info@alasySenderos.com">info@alasySenderos.com</a><br>
+      o llamarnos al <a href="tel:+573001234567">+57 300 123 4567</a>
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
     <div class="footer-main">
       <div>© 2025 Alas y Senderos Villamaría</div>
       <div class="footer-social">
-        <!-- Links a redes sociales aquí -->
+        <a href="#">Instagram</a> · 
+        <a href="#">Facebook</a> · 
+        <a href="#">WhatsApp</a>
       </div>
     </div>
     <div class="footer-credits">
-      <span>Desarrollado por el equipo de Alas y Senderos</span>
+      <img src="images/icon/flaticon.png" class="flaticon-logo" alt="Flaticon Logo">
+      <span>
+        Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> 
+        from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+      </span>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
